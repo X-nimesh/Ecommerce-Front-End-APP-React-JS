@@ -1,9 +1,13 @@
 *{
   text-align: center;
-  color: black;
-  /* background: #282c34; */
+  color: white;
+  background: #282c34;
 }
 .App {
   text-align: center;
 
+}
+.root{
+  background: #282c34;
+  
 }
