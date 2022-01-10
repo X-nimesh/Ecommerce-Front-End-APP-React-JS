@@ -14,16 +14,16 @@ function App() {
     <h1>Welcome to React Router!</h1>
 
 
-    <Switch>
+    {/* <Switch>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-      </Switch>
+      </Switch> */}
 
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<Home />} />                 
         <Route path='/about' element={<About />} />                 
         <Route path='/products' element={<Products />} />          
-      </Routes> */}
+      </Routes>
 
     </div>
     
