@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
 }
-*{
+body{
   background: #282c34;
 
 }
@@ -16,3 +16,4 @@ code {
     monospace;
     
 }
+

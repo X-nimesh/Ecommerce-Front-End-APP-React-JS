@@ -1,9 +1,15 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-
+import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
+import MenuBar from '../Component/MenuBar'
 import About from '../Component/Pages/about'
+import Account from '../Component/Pages/Account'
 import Home from '../Component/Pages/Home'
-import Products from '../Component/Pages/Products'
+import Login from '../Component/Pages/Login'
+import NotFound from '../Component/Pages/NotFound'
+import TryPage from '../Component/Pages/TryPage'
+import ProtectedRoutes from '../Component/protectedRoutes'
+
+
 import './App.css'
 
 function App() {
@@ -11,15 +17,18 @@ function App() {
   return (
     
     <div className="App">
-    <h1>Welcome to React Router!</h1>
-    
-
-    
+      <MenuBar/>
+  
 
       <Routes>
-        <Route path='/' element={<Home />} />                 
-        <Route path='/about' element={<About />} />                 
-        <Route path='/products' element={<Products />} />          
+          <Route path="*" component={<NotFound/>} />        
+        <Route path='/' element={<Login/>} />
+        {/* <Route component={<ProtectedRoutes/>}>                  */}
+          <Route path='/home' element={<Home/>} />                 
+          <Route path='/try/:id' element={<TryPage/>} />                 
+          <Route path='/about' element={<About />} />                 
+          <Route path='/account' element={<Account />} />          
+        {/* </Route> */}
       </Routes>
 
     </div>
