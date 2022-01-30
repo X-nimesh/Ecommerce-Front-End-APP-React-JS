@@ -21,9 +21,18 @@ async function fetchProducts(){
 console.log(products);
 if(products==undefined){
   return (
-    <h1>
-      Loading.....
-    </h1>
+    <div class="center">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
   )
 }
 else{

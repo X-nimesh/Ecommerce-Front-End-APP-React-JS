@@ -5,6 +5,7 @@ import About from '../Component/Pages/about'
 import Account from '../Component/Pages/Account'
 import Home from '../Component/Pages/Home'
 import Login from '../Component/Pages/Login'
+import LoginErroe from '../Component/Pages/LoginErroe'
 import NotFound from '../Component/Pages/NotFound'
 import TryPage from '../Component/Pages/TryPage'
 import ProtectedRoutes from '../Component/protectedRoutes'
@@ -13,6 +14,7 @@ import ProtectedRoutes from '../Component/protectedRoutes'
 import './App.css'
 
 function App() {
+  let [Status,setStatus]=useState(false);
   
   return (
     
@@ -22,12 +24,13 @@ function App() {
 
       <Routes>
           <Route path="*" component={<NotFound/>} />        
-        <Route path='/' element={<Login/>} />
+        <Route path='/' element={<Login />} />
         {/* <Route component={<ProtectedRoutes/>}>                  */}
           <Route path='/home' element={<Home/>} />                 
           <Route path='/try/:id' element={<TryPage/>} />                 
           <Route path='/about' element={<About />} />                 
-          <Route path='/account' element={<Account />} />          
+          <Route path='/account' element={<Account status={Status}/>} />          
+          <Route path='/error' element={<LoginErroe/>} />          
         {/* </Route> */}
       </Routes>
 

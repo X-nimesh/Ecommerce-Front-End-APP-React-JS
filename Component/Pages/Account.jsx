@@ -4,14 +4,13 @@ const Account = () => {
   let [members,setMembers]=useState(undefined);
   let users= undefined;
   let response= undefined;
+  let loggedIn=false;
+  
+
 
   useEffect(() => {
     fetchUsers();
-    // fetch("https://fakestoreapi.com/users/1")
-    //     .then((res)=>res.json())
-    //     .then((data)=>{
-    //         setMembers(data);
-    //     })
+   
   }, []);
   async function fetchUsers(){
     response = await fetch("https://fakestoreapi.com/users/1")//fetch the data
@@ -25,9 +24,18 @@ const Account = () => {
  let imgL="https://i1.wp.com/growmetachem.com/wp-content/uploads/2020/09/Business-Male-Icon-Vector-User-Icon-Avatar-PNG-and-Vector-with-Transparent-Background-for-Free-Download.jpg?ssl=1"
 if(members==undefined){
   return (
-    <h1>
-      Loading.....
-    </h1>
+    <div class="center">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
   )
 }
 else{
